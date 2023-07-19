@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function() {
+        area.onmousemove = function(event) {
+            x.innerText = event.offsetX
+            y.innerText = event.offsetY
+        }
+    }
+</script>
+<style>
+    .area{
+        width:150px;
+        height:100px;
+        background-color: pink;
+    }
+</style>
+<body>
+    <div id="area" class="area"></div>
+    <p></p>
+    x: <label id="x">0</label><br>
+    y: <label id="y">0</label>
+</body>
+</html>

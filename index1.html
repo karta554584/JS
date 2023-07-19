@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+window.onload = function() { //一個頁面只能出現一個
+    mybutton.onclick = function () {
+        mylabel.innerHTML = '<span style="color: cyan">Hi</span>'
+    }
+    // mybutton.onclick = function () {
+    //     mylabel.innerHTML = '<span style="color: orange">Hello, World</span>'
+    // }
+
+
+        mybutton.addEventListener('click', function () {
+            mylabel2.innerHTML = '<span style="color: pink">Hello, World</span>'
+     })
+ }
+</script>
+<body>
+    <button id="mybutton">click</button><p></p>
+    <label id="mylabel">AAA</label><p></p>
+    <label id="mylabel2">bbb</label>
+</body>
+</html>
