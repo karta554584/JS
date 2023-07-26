@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<script>
+    $(() => {
+        $('div[x="2"]')
+        .html('hello')
+        .css('background-color', 'lightgreen')
+        .css('color', 'red')
+        
+    let element = document.getElementById('one')
+    element.innerHTML = 'Hi'
+    element.style = 'background-color: lightgreen; color:red'
+    })
+</script>
+
+<body>
+    <div id="one" x="1">1</div>
+    <div id="two" x="2">2</div>
+    <div id="three" x="3">3</div>
+</body>
+
+</html>
