@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () {
+        let start_time = Date.now()
+        bn.onclick = function () {
+            // container.innerHTML = ( Date.now() - start_time ) / 1000
+            var myDate = new Date ( 1690162956 *1000);
+            container.innerHTML = myDate/toLocaleString('zh-TW', {TimeZone: 'America/New_York'})
+        }
+    }
+</script>
+
+<body>
+    <button id="bn">click</button>
+    <div id="container"></div>
+</body>
+
+</html>

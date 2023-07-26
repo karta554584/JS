@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () {
+        let d = new Date()
+        date.innerText = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+    }
+    date.innerText = now()
+    setInterval(function () {
+        date.innerText = now()
+    }, 1000)
+
+    bn.onclick = function () {
+        fetch('https://raw.githubusercontent.com/kirkchu/mongodb/main/demo.json')
+            .then(function (reaspnse) {
+                return reaspnse.json()
+            })
+            .then(function (data) {
+                let s = '<ul>'
+                data.forEach(function)
+            })
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

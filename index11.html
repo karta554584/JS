@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Person(name, age) {
+        this.name = name
+        this.age = age
+        this.email = () => `${name}@gmail.com`   
+    }
+
+    Person.prototype.hairColor = 'black'
+    
+    function NewPerson(name, age, birthday) {
+        Person.call(this, name, age)
+        this.birthday = birthday
+    }
+    
+    let p1 = new Person('David', 30)
+    let p2 = new Person('Betty', 27)
+    console.log(p1.name)
+    console.log(p1.email())
+    console.log(p1.hairColor)
+
+    let p3 = new NewPerson('Mei', 20, '2013/5/3')
+    console.log(p3.name)
+    console.log(p3.email())
+    console.log(p3.hairColor) //prototype效果不會被繼承 so undefined
+    console.log(p3.birthday)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
