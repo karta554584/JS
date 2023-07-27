@@ -6,18 +6,43 @@
     <title>Document</title>
 </head>
 <script>
+    // $(() => {
+    //     $('div ul li:nth-child(2)')
+    //     .css('background-color', 'yellow')
+    //     .siblings()
+    //     .addClass('yellow')
+    //     .parent()
+    //     .click(function() {
+    //         $(this) //<= <ul>
+    //             .children()
+    //             .toggleClass('yellow')
+    //     })
+    // })
     $(() => {
-        $('div ul li:nth-child(2)')
-        .css('background-color', 'yellow')
-        .siblings()
-        .addClass('yellow')
-        .parent()
-        .click(function() {
-            $(this) //<= <ul>
-                .children()
-                .toggleClass('yellow')
-        })
+        let colors = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'purple']
     })
+
+    $('button')
+        .eq(0)
+        .click(function() {
+            $('ul')
+                .first()
+                .show(600)
+        })
+    $('button')
+        .eq(1)
+        .click(function() {
+            $('ul')
+                .first()
+                .hide(600)
+        })
+    $('button')
+        .eq(2)
+        .click(function() {
+            $('ul')
+                .first()
+                .toggle()
+        })
 </script>
 <style>
     .yellow {
@@ -31,6 +56,11 @@
             <li>bbb</li>
             <li>ccc</li>
             <li>ddd</li>
+        </ul>
+        <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
         </ul>
     </div>
 </body>
